@@ -68,7 +68,7 @@
         #classList li {
             color: #e2e8f0;
         }
-        #classList li a {
+        #classList li i {
             color: #f56565; /* Keep red for PDF icon */
         }
         .hover\:bg-blue-100:hover {
@@ -106,6 +106,25 @@
          .download-emoji:hover {
              background-color: #de751f; /* Darker hover color */
          }
+
+         /* Plyr Customizations */
+         /* Make the progress bar take available space */
+        .plyr__progress {
+            flex-grow: 1; /* Allow progress bar to take more space */
+            margin-right: 10px; /* Add some space */
+        }
+
+        /* Ensure controls are a flex container */
+        .plyr__controls {
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+
+         /* REMOVED Hide the volume control entirely */
+         /* .plyr__controls__item.plyr__volume {
+             display: none !important;
+         } */
+
     </style>
 </head>
 <body class="font-sans">
@@ -123,7 +142,7 @@
                     <i class="fas fa-file-pdf mr-2"></i>Download PDF
                 </a>
                  <button id="downloadEmojiBtn" class="download-emoji">
-                    <i class="fas fa-smile mr-2"></i>Download Emoji
+                    <i class="fas fa-smile mr-2"></i>Open on YouTube
                 </button>
             </div>
         </div>
@@ -136,286 +155,286 @@
             <h2 class="text-lg font-semibold mb-4 text-gray-100">Class List</h2>
             <ul id="classList" class="space-y-2 max-h-96 overflow-y-auto">
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer bg-blue-200" data-vid="RUQcm3vIbWo" data-nname="Course Roadmap" data-npdf="20240527-1716748184-LRH05IsN.pdf">
-                    Course Roadmap <a href="https://www.bondipathshala.com.bd/pdf/20240527-1716748184-LRH05IsN.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    Course Roadmap <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="CLrwwQj697Q" data-nname="Basic Building Class(BBC)-01" data-npdf="20240529-1716937235-9lpGk0ak.pdf">
-                    Basic Building Class(BBC)-01 <a href="https://www.bondipathshala.com.bd/pdf/20240529-1716937235-9lpGk0ak.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    Basic Building Class(BBC)-01 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="P-dkM5_I1VU" data-nname="Basic Building Class(BBC)-02" data-npdf="20240601-1717261772-VB8HeJSt.pdf">
-                    Basic Building Class(BBC)-02 <a href="https://www.bondipathshala.com.bd/pdf/20240601-1717261772-VB8HeJSt.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    Basic Building Class(BBC)-02 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="pxsGAGomnoI" data-nname="Basic Building Class(BBC)-03" data-npdf="20240603-1717361228-TPilcyPf.pdf">
-                    Basic Building Class(BBC)-03 <a href="https://www.bondipathshala.com.bd/pdf/20240603-1717361228-TPilcyPf.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    Basic Building Class(BBC)-03 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="p3wBA8no6c4" data-nname="Basic Building Class(BBC)-04" data-npdf="20240605-1717589649-Qsqg5u7r.pdf">
-                    Basic Building Class(BBC)-04 <a href="https://www.bondipathshala.com.bd/pdf/20240605-1717589649-Qsqg5u7r.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    Basic Building Class(BBC)-04 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="JJuvBfrGUVo" data-nname="Basic Building Class(BBC)-05" data-npdf="20240607-1717710084-HL1UVZIy.pdf">
-                    Basic Building Class(BBC)-05 <a href="https://www.bondipathshala.com.bd/pdf/20240607-1717710084-HL1UVZIy.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    Basic Building Class(BBC)-05 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="WlrST4v-kaI" data-nname="Basic Building Class(BBC)-06" data-npdf="20240612-1718138903-CosRm2Hp.pdf">
-                    Basic Building Class(BBC)-06 <a href="https://www.bondipathshala.com.bd/pdf/20240612-1718138903-CosRm2Hp.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    Basic Building Class(BBC)-06 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="cUM3EbhlMmU" data-nname="Basic Building Class(BBC)-07" data-npdf="20240614-1718313883-TerlymZ6.pdf">
-                    Basic Building Class(BBC)-07 <a href="https://www.bondipathshala.com.bd/pdf/20240614-1718313883-TerlymZ6.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    Basic Building Class(BBC)-07 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="_KsZlI7wwBo" data-nname="গুণগত রসায়ন পর্ব-০১" data-npdf="20240701-1719779817-aIxobbwK.pdf">
-                    গুণগত রসায়ন পর্ব-০১ <a href="https://www.bondipathshala.com.bd/pdf/20240701-1719779817-aIxobbwK.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-০১ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="u9-QXqsswyk" data-nname="গুণগত রসায়ন পর্ব-০২" data-npdf="20240703-1719944077-MSjIfz7g.pdf">
-                    গুণগত রসায়ন পর্ব-০২ <a href="https://www.bondipathshala.com.bd/pdf/20240703-1719944077-MSjIfz7g.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-০২ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="IGa_6J-VB3o" data-nname="গুণগত রসায়ন পর্ব-০৩" data-npdf="20240705-1720129590-Kws5CXLp.pdf">
-                    গুণগত রসায়ন পর্ব-০৩ <a href="https://www.bondipathshala.com.bd/pdf/20240705-1720129590-Kws5CXLp.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-০৩ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="cOIPzY3ddJU" data-nname="গুনগত রসায়ন পর্ব-০৪" data-npdf="20240708-1720385932-6hGrw8gr.pdf">
-                    গুনগত রসায়ন পর্ব-০৪ <a href="https://www.bondipathshala.com.bd/pdf/20240708-1720385932-6hGrw8gr.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুনগত রসায়ন পর্ব-০৪ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="hWVHKkx2FJs" data-nname="গুণগত রসায়ন পর্ব-০৫" data-npdf="20240710-1720616665-v7M9BxDL.pdf">
-                    গুণগত রসায়ন পর্ব-০৫ <a href="https://www.bondipathshala.com.bd/pdf/20240710-1720616665-v7M9BxDL.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-০৫ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="4aVBQzg5L80" data-nname="গুণগত রসায়ন পর্ব-০৬" data-npdf="20240715-1720997756-tIbXPU3s.pdf">
-                    গুণগত রসায়ন পর্ব-০৬ <a href="https://www.bondipathshala.com.bd/pdf/20240715-1720997756-tIbXPU3s.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-০৬ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="GE4dDmImPSA" data-nname="গুণগত রসায়ন পর্ব-০৭" data-npdf="20240820-1724176154-tJTn6aKB.pdf">
-                    গুণগত রসায়ন পর্ব-০৭ <a href="https://www.bondipathshala.com.bd/pdf/20240820-1724176154-tJTn6aKB.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-০৭ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="IaKl2mIISw8" data-nname="গুণগত রসায়ন পর্ব-০৮" data-npdf="20240828-1724790082-jt5KjqbB.pdf">
-                    গুণগত রসায়ন পর্ব-০৮ <a href="https://www.bondipathshala.com.bd/pdf/20240828-1724790082-jt5KjqbB.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-০৮ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="JMeG_IB_Yvs" data-nname="গুণগত রসায়ন পর্ব-০৯" data-npdf="20240830-1724967108-BAaCtxU5.pdf">
-                    গুণগত রসায়ন পর্ব-০৯ <a href="https://www.bondipathshala.com.bd/pdf/20240830-1724967108-BAaCtxU5.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-০৯ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="ZnHMZAGrIj8" data-nname="গুণগত রসায়ন পর্ব-১০" data-npdf="20240902-1725216596-9uStRcWl.pdf">
-                    গুণগত রসায়ন পর্ব-১০ <a href="https://www.bondipathshala.com.bd/pdf/20240902-1725216596-9uStRcWl.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-১০ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="I6NTnTUikYY" data-nname="গুণগত রসায়ন পর্ব-১১" data-npdf="20240906-1725641873-2lKgq53l.pdf">
-                    গুণগত রসায়ন পর্ব-১১ <a href="https://www.bondipathshala.com.bd/pdf/20240906-1725641873-2lKgq53l.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-১১ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="um2noyXpjug" data-nname="গুণগত রসায়ন পর্ব-১২" data-npdf="20240909-1725825601-zdAXsmg9.pdf">
-                    গুণগত রসায়ন পর্ব-১২ <a href="https://www.bondipathshala.com.bd/pdf/20240909-1725825601-zdAXsmg9.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-১২ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="EIDocDa-xg4" data-nname="গুণগত রসায়ন পর্ব-১৩" data-npdf="20240910-1725987615-f7GytNbZ.pdf">
-                    গুণগত রসায়ন পর্ব-১৩ <a href="https://www.bondipathshala.com.bd/pdf/20240910-1725987615-f7GytNbZ.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-১৩ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="GFhfs-J2_3o" data-nname="গুণগত রসায়ন পর্ব-১৪" data-npdf="20240913-1726205413-mWblYhsS.pdf">
-                    গুণগত রসায়ন পর্ব-১৪ <a href="https://www.bondipathshala.com.bd/pdf/20240913-1726205413-mWblYhsS.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    গুণগত রসায়ন পর্ব-১৪ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="X7-HUoe_ud4" data-nname="দ্রাব্যতা - পর্ব ০১" data-npdf="20240916-1726424417-x6ou2UWz.pdf">
-                    দ্রাব্যতা - পর্ব ০১ <a href="https://www.bondipathshala.com.bd/pdf/20240916-1726424417-x6ou2UWz.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    দ্রাব্যতা - পর্ব ০১ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="aS2__Xjjc0M" data-nname="দ্রাব্যতা - পর্ব ০২" data-npdf="20240918-1726604182-9kBeOFvT.pdf">
-                    দ্রাব্যতা - পর্ব ০২ <a href="https://www.bondipathshala.com.bd/pdf/20240918-1726604182-9kBeOFvT.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    দ্রাব্যতা - পর্ব ০২ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="HgbSl2W9thE" data-nname="দ্রাব্যতা - পর্ব ০৩" data-npdf="20240921-1726898750-7dLilSCH.pdf">
-                    দ্রাব্যতা - পর্ব ০৩ <a href="https://www.bondipathshala.com.bd/pdf/20240921-1726898750-7dLilSCH.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    দ্রাব্যতা - পর্ব ০৩ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="Zoyiw5YHdGk" data-nname="দ্রাব্যতা - পর্ব ০৪" data-npdf="20240923-1727076002-eRaPNEQd.pdf">
-                    দ্রাব্যতা - পর্ব ০৪ <a href="https://www.bondipathshala.com.bd/pdf/20240923-1727076002-eRaPNEQd.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    দ্রাব্যতা - পর্ব ০৪ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="2321lmDBC58" data-nname="দ্রাব্যতা - পর্ব ০৫" data-npdf="20240924-1727197468-GFHHGErh.pdf">
-                    দ্রাব্যতা - পর্ব ০৫ <a href="https://www.bondipathshala.com.bd/pdf/20240924-1727197468-GFHHGErh.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    দ্রাব্যতা - পর্ব ০৫ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="6P0rdcXowy0" data-nname="দ্রাব্যতা - পর্ব ০৬" data-npdf="20240927-1727378157-FT7ahqe0.pdf">
-                    দ্রাব্যতা - পর্ব ০৬ <a href="https://www.bondipathshala.com.bd/pdf/20240927-1727378157-FT7ahqe0.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    দ্রাব্যতা - পর্ব ০৬ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="YiKI6mSZ6yg" data-nname="দ্রাব্যতা - পর্ব ০৭" data-npdf="20241002-1727807137-yGxhBnvQ.pdf">
-                    দ্রাব্যতা - পর্ব ০৭ <a href="https://www.bondipathshala.com.bd/pdf/20241002-1727807137-yGxhBnvQ.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    দ্রাব্যতা - পর্ব ০৭ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="SZ7kzxWPWJo" data-nname="দ্রাব্যতা । অধ:ক্ষেপ সংক্রান্ত ম্যাথ" data-npdf="20241003-1727899897-fQQCcxBB.pdf">
-                    দ্রাব্যতা । অধ:ক্ষেপ সংক্রান্ত ম্যাথ <a href="https://www.bondipathshala.com.bd/pdf/20241003-1727899897-fQQCcxBB.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    দ্রাব্যতা । অধ:ক্ষেপ সংক্রান্ত ম্যাথ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="YukQN2Xys9U" data-nname="দ্রাব্যতা | সমআয়ন প্রভাব" data-npdf="20241006-1728204795-JpaEbaMi.pdf">
-                    দ্রাব্যতা | সমআয়ন প্রভাব <a href="https://www.bondipathshala.com.bd/pdf/20241006-1728204795-JpaEbaMi.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    দ্রাব্যতা | সমআয়ন প্রভাব <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="xXMNJKEzNZU" data-nname="দ্রাব্যতার উপর PH এর প্রভাব" data-npdf="20241006-1728209625-DiFK076F.pdf">
-                    দ্রাব্যতার উপর PH এর প্রভাব <a href="https://www.bondipathshala.com.bd/pdf/20241006-1728209625-DiFK076F.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    দ্রাব্যতার উপর PH এর প্রভাব <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="FJes1R9aark" data-nname="আয়ন শনাক্তকরণ" data-npdf="20241002-1727818674-AAhnAILi.pdf">
-                    আয়ন শনাক্তকরণ <a href="https://www.bondipathshala.com.bd/pdf/20241002-1727818674-AAhnAILi.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    আয়ন শনাক্তকরণ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="pApzf0miQDQ" data-nname="শিখা পরীক্ষা ও তেজষ্ক্রিয়তা" data-npdf="20241017-1729168173-TvKefz6t.pdf">
-                    শিখা পরীক্ষা ও তেজষ্ক্রিয়তা <a href="https://www.bondipathshala.com.bd/pdf/20241017-1729168173-TvKefz6t.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    শিখা পরীক্ষা ও তেজষ্ক্রিয়তা <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="ZvwXwq_JALs" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০১" data-npdf="20241019-1729338739-wZDChI9o.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০১ <a href="https://www.bondipathshala.com.bd/pdf/20241019-1729338739-wZDChI9o.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০১ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="oOQbjtrr25E" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০২" data-npdf="20241021-1729448026-DzYyBwik.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০২ <a href="https://www.bondipathshala.com.bd/pdf/20241021-1729448026-DzYyBwik.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০২ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="ngDqOXN0R4s" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০৩" data-npdf="20241025-1729803130-20uc1n5X.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০৩ <a href="https://www.bondipathshala.com.bd/pdf/20241025-1729803130-20uc1n5X.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০৩ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="8nr8Zb-CHg0" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৪.1" data-npdf="20241028-1730055866-HOhrfiFb.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৪.1 <a href="https://www.bondipathshala.com.bd/pdf/20241028-1730055866-HOhrfiFb.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৪.1 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="f8nwirkZ58Q" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৪.2" data-npdf="20241028-1730055866-HOhrfiFb.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৪.2 <a href="https://www.bondipathshala.com.bd/pdf/20241028-1730055866-HOhrfiFb.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৪.2 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="wzl4yRT4s7k" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০৫" data-npdf="20241104-1730659936-nC1vGD15.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০৫ <a href="https://www.bondipathshala.com.bd/pdf/20241104-1730659936-nC1vGD15.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="wzl4yRT4s7k" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০五" data-npdf="20241104-1730659936-nC1vGD15.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০五 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="kR-tyH4bEHY" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৬.1" data-npdf="20241110-1731196619-mwTxJJZ6.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৬.1 <a href="https://www.bondipathshala.com.bd/pdf/20241110-1731196619-mwTxJJZ6.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৬.1 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="a29pwQu2Tts" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৬.2" data-npdf="20241113-1731440552-L8ktpKzN.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৬.2 <a href="https://www.bondipathshala.com.bd/pdf/20241113-1731440552-L8ktpKzN.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৬.2 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="idVoYLbY1s0" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০৭" data-npdf="20241117-1731861931-RHDYv0La.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০৭ <a href="https://www.bondipathshala.com.bd/pdf/20241117-1731861931-RHDYv0La.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="idVoYLbY1s0" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০七" data-npdf="20241117-1731861931-RHDYv0La.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০七 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="YPAofIfRHgk" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৮.1" data-npdf="20241122-1732291608-PBx550nd.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৮.1 <a href="https://www.bondipathshala.com.bd/pdf/20241122-1732291608-PBx550nd.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৮.1 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="hGjJGRY2IqY" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৮.2" data-npdf="20241125-1732486847-0Y1YMcPe.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৮.2 <a href="https://www.bondipathshala.com.bd/pdf/20241125-1732486847-0Y1YMcPe.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ৮.2 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="qINYlblz_Vo" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০৯" data-npdf="20241206-1733439837-akimHc9X.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০৯ <a href="https://www.bondipathshala.com.bd/pdf/20241206-1733439837-akimHc9X.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="qINYlblz_Vo" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০九" data-npdf="20241206-1733439837-akimHc9X.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ০৯ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="MU1oVV0iJcE" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১০" data-npdf="20241209-1733696432-CGd5SsRc.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১০ <a href="https://www.bondipathshala.com.bd/pdf/20241209-1733696432-CGd5SsRc.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="MU1oVV0iJcE" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 10" data-npdf="20241209-1733696432-CGd5SsRc.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 10 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="pMKC7sehw80" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১১" data-npdf="20241216-1734365525-HERacn00.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১১ <a href="https://www.bondipathshala.com.bd/pdf/20241216-1734365525-HERacn00.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="pMKC7sehw80" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 11" data-npdf="20241216-1734365525-HERacn00.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 11 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="wJb-sIvlPCk" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১২" data-npdf="20241216-1734365548-eyO3V3FM.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১২ <a href="https://www.bondipathshala.com.bd/pdf/20241216-1734365548-eyO3V3FM.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="wJb-sIvlPCk" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 12" data-npdf="20241216-1734365548-eyO3V3FM.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 12 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="snPvzhU09A0" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৩" data-npdf="20241216-1734365563-bP2699jc.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৩ <a href="https://www.bondipathshala.com.bd/pdf/20241216-1734365563-bP2699jc.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="snPvzhU09A0" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 13" data-npdf="20241216-1734365563-bP2699jc.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 13 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="8fDDh9j4m4M" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৪" data-npdf="20241216-1734365576-NyxsZxmh.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৪ <a href="https://www.bondipathshala.com.bd/pdf/20241216-1734365576-NyxsZxmh.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="8fDDh9j4m4M" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 14" data-npdf="20241216-1734365576-NyxsZxmh.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 14 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="l_iyYq02Kic" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৫" data-npdf="20241213-1734033285-ADXww1KD.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৫ <a href="https://www.bondipathshala.com.bd/pdf/20241213-1734033285-ADXww1KD.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="l_iyYq02Kic" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 15" data-npdf="20241213-1734033285-ADXww1KD.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 15 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="o6oaC_dQngo" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৬" data-npdf="20241218-1734460745-dmzECrGg.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৬ <a href="https://www.bondipathshala.com.bd/pdf/20241218-1734460745-dmzECrGg.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="o6oaC_dQngo" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 16" data-npdf="20241218-1734460745-dmzECrGg.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 16 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="fh5TXEi-8S0" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৭" data-npdf="20241220-1734636976-QPg2nd6f.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৭ <a href="https://www.bondipathshala.com.bd/pdf/20241220-1734636976-QPg2nd6f.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="fh5TXEi-8S0" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 17" data-npdf="20241220-1734636976-QPg2nd6f.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 17 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="2gnkfdDbp5g" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৮" data-npdf="20241223-1734904070-wRzQDurU.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৮ <a href="https://www.bondipathshala.com.bd/pdf/20241223-1734904070-wRzQDurU.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="2gnkfdDbp5g" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 18" data-npdf="20241223-1734904070-wRzQDurU.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 18 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="_J1gSdRTlN0" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৯" data-npdf="20241225-1735069463-GfPogKfb.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ১৯ <a href="https://www.bondipathshala.com.bd/pdf/20241225-1735069463-GfPogKfb.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="_J1gSdRTlN0" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 19" data-npdf="20241225-1735069463-GfPogKfb.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 19 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="jHqOfPppeVk" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ২০" data-npdf="20241227-1735242143-ySnmZZbO.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ২০ <a href="https://www.bondipathshala.com.bd/pdf/20241227-1735242143-ySnmZZbO.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="jHqOfPppeVk" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 20" data-npdf="20241227-1735242143-ySnmZZbO.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 20 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="sZDSIVMkbGk" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ২১" data-npdf="20241230-1735512808-CCOvmkp5.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ২১ <a href="https://www.bondipathshala.com.bd/pdf/20241230-1735512808-CCOvmkp5.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="sZDSIVMkbGk" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 21" data-npdf="20241230-1735512808-CCOvmkp5.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 21 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="YQpuFq84-L0" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ২২" data-npdf="20250101-1735673303-7rSG4G9M.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ২২ <a href="https://www.bondipathshala.com.bd/pdf/20250101-1735673303-7rSG4G9M.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="YQpuFq84-L0" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 22" data-npdf="20250101-1735673303-7rSG4G9M.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 22 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="DSSnGCOcRgs" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ২৩" data-npdf="20250103-1735844101-Oaow3UpN.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ২৩ <a href="https://www.bondipathshala.com.bd/pdf/20250103-1735844101-Oaow3UpN.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="DSSnGCOcRgs" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 23" data-npdf="20250103-1735844101-Oaow3UpN.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 23 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="2yZ5TnQz7Rc" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ২৪" data-npdf="20250106-1736112495-ssUUot8l.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব ২৪ <a href="https://www.bondipathshala.com.bd/pdf/20250106-1736112495-ssUUot8l.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="2yZ5TnQz7Rc" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 24" data-npdf="20250106-1736112495-ssUUot8l.pdf">
+                    মৌলের পর্যায়বৃত্ত ধর্ম - পর্ব 24 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="tbDXYvjogdk" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - MCQ সলভ (2017-23)" data-npdf="20250106-1736142499-FUuw0Dju.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - MCQ সলভ (2017-23) <a href="https://www.bondipathshala.com.bd/pdf/20250106-1736142499-FUuw0Dju.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    মৌলের পর্যায়বৃত্ত ধর্ম - MCQ সলভ (2017-23) <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="7MNsw-0cdrI" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - CQ সলভ (2017-23)" data-npdf="20250106-1736142963-Flwn3K5E.pdf">
-                    মৌলের পর্যায়বৃত্ত ধর্ম - CQ সলভ (2017-23) <a href="https://www.bondipathshala.com.bd/pdf/20250106-1736142963-Flwn3K5E.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    মৌলের পর্যায়বৃত্ত ধর্ম - CQ সলভ (2017-23) <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="jwC-qUU_YXA" data-nname="Special Class - Lewis Dot Structure" data-npdf="20250112-1736674297-EuZcxDQn.pdf">
-                    Special Class - Lewis Dot Structure <a href="https://www.bondipathshala.com.bd/pdf/20250112-1736674297-EuZcxDQn.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    Special Class - Lewis Dot Structure <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="Nj-iy8gVgpg" data-nname="মৌলের পর্যায়বৃত্ত ধর্ম - শেষ পর্ব" data-npdf="">
                     মৌলের পর্যায়বৃত্ত ধর্ম - শেষ পর্ব
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="BiqBDNb9NQQ" data-nname="রাসায়নিক পরিবর্তন - পর্ব ০১" data-npdf="20250126-1737830923-zvTGCirl.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ০১ <a href="https://www.bondipathshala.com.bd/pdf/20250126-1737830923-zvTGCirl.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ০১ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="nk5c5ClU6X0" data-nname="রাসায়নিক পরিবর্তন - পর্ব ০২" data-npdf="20250127-1737918975-0wrT62wY.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ০২ <a href="https://www.bondipathshala.com.bd/pdf/20250127-1737918975-0wrT62wY.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ০২ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="XzLM7iIOoos" data-nname="Special Live Session - Lecture 01" data-npdf="20250202-1738434734-hCzAvXWq.pdf">
-                    Special Live Session - Lecture 01 <a href="https://www.bondipathshala.com.bd/pdf/20250202-1738434734-hCzAvXWq.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    Special Live Session - Lecture 01 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="VVCPuuzyda4" data-nname="রাসায়নিক পরিবর্তন - পর্ব ০৩" data-npdf="20250204-1738620741-jw3hji7a.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ০৩ <a href="https://www.bondipathshala.com.bd/pdf/20250204-1738620741-jw3hji7a.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ০৩ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="p3s3x_E-QjQ" data-nname="রাসায়নিক পরিবর্তন - পর্ব ০৪" data-npdf="20250204-1738691757-HXD1GYzh.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ০৪ <a href="https://www.bondipathshala.com.bd/pdf/20250204-1738691757-HXD1GYzh.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ০৪ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="r8yTMCCmnn4" data-nname="রাসায়নিক পরিবর্তন - পর্ব ০৫" data-npdf="20250206-1738779901-8VpNQA7c.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ০৫ <a href="https://www.bondipathshala.com.bd/pdf/20250206-1738779901-8VpNQA7c.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ০৫ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="lYDoS17pygQ" data-nname="রাসায়নিক পরিবর্তন - পর্ব ০৬" data-npdf="20250210-1739132326-J1VpSC24.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ০৬ <a href="https://www.bondipathshala.com.bd/pdf/20250210-1739132326-J1VpSC24.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ০৬ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="CNQ6X2KFLfk" data-nname="রাসায়নিক পরিবর্তন - পর্ব ০৭" data-npdf="20250213-1739467283-iKhht0Qc.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ০৭ <a href="https://www.bondipathshala.com.bd/pdf/20250213-1739467283-iKhht0Qc.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ০৭ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="cxcfKjgFBas" data-nname="রাসায়নিক পরিবর্তন - পর্ব ০৮" data-npdf="20250214-1739472276-cs2jSOPs.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ০৮ <a href="https://www.bondipathshala.com.bd/pdf/20250214-1739472276-cs2jSOPs.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ০৮ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="qgRG7dAatl4" data-nname="রাসায়নিক পরিবর্তন - পর্ব ০৯" data-npdf="20250217-1739737025-DwtbCGre.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ০৯ <a href="https://www.bondipathshala.com.bd/pdf/20250217-1739737025-DwtbCGre.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="qgRG7dAatl4" data-nname="রাসayনিক পরিবর্তন - পর্ব ০৯" data-npdf="20250217-1739737025-DwtbCGre.pdf">
+                    রাসayনিক পরিবর্তন - পর্ব ০৯ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="q9Rwc6_3nnc" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১০" data-npdf="20250219-1739906500-hU6MfCaT.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১০ <a href="https://www.bondipathshala.com.bd/pdf/20250219-1739906500-hU6MfCaT.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="q9Rwc6_3nnc" data-nname="রাসayনিক পরিবর্তন - পর্ব ১০" data-npdf="20250219-1739906500-hU6MfCaT.pdf">
+                    রাসayনিক পরিবর্তন - পর্ব ১০ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="yAfpteRfUT8" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১১.1" data-npdf="20250221-1740086447-JXKGLM1U.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১১.1 <a href="https://www.bondipathshala.com.bd/pdf/20250221-1740086447-JXKGLM1U.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="yAfpteRfUT8" data-nname="রাসayনিক পরিবর্তন - পর্ব ১১.1" data-npdf="20250221-1740086447-JXKGLM1U.pdf">
+                    রাসayনিক পরিবর্তন - পর্ব ১১.1 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="7kz4crQ8TrA" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১১.2" data-npdf="20250221-1740086526-pBZYoUUT.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১১.2 <a href="https://www.bondipathshala.com.bd/pdf/20250221-1740086526-pBZYoUUT.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="7kz4crQ8TrA" data-nname="রাসayনিক পরিবর্তন - পর্ব ১১.2" data-npdf="20250221-1740086526-pBZYoUUT.pdf">
+                    রাসayনিক পরিবর্তন - পর্ব ১১.2 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="tV_OThoh8lA" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১১.3" data-npdf="20250221-1740138511-u9Fbr0ax.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১১.3 <a href="https://www.bondipathshala.com.bd/pdf/20250221-1740138511-u9Fbr0ax.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ১১.3 <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="cFUnBtBmQtM" data-nname="Kp &amp; Kc- CQ &amp; MCQ" data-npdf="20240502-1714599034-qQA4HOND.pdf">
-                    Kp &amp; Kc- CQ &amp; MCQ <a href="https://www.bondipathshala.com.bd/pdf/20240502-1714599034-qQA4HOND.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="cFUnBtBmQtM" data-nname="Kp & Kc- CQ & MCQ" data-npdf="20240502-1714599034-qQA4HOND.pdf">
+                    Kp & Kc- CQ & MCQ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="BqM1FeVjk2A" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১২" data-npdf="20250225-1740505568-LwGAxC92.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১২ <a href="https://www.bondipathshala.com.bd/pdf/20250225-1740505568-LwGAxC92.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ১২ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="8Xqe_RBbJdA" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১৩" data-npdf="20250303-1740940956-x10233zp.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১৩ <a href="https://www.bondipathshala.com.bd/pdf/20250303-1740940956-x10233zp.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ১৩ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="tN4fo6KSihA" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১৪" data-npdf="20250306-1741200331-mrcQczBd.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১৪ <a href="https://www.bondipathshala.com.bd/pdf/20250306-1741200331-mrcQczBd.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ১৪ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="A2K6GmF7c_A" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১৫" data-npdf="20250311-1741632569-vhhLT0og.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১৫ <a href="https://www.bondipathshala.com.bd/pdf/20250311-1741632569-vhhLT0og.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসায়নিক পরিবর্তন - পর্ব ১৫ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="0bV_E4rMIjM" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১৬" data-npdf="20250312-1741781551-NUKEOeYT.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১৬ <a href="https://www.bondipathshala.com.bd/pdf/20250312-1741781551-NUKEOeYT.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    রাসayনিক পরিবর্তন - পর্ব ১৬ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="85TdWPDUVAQ" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১৭" data-npdf="20250320-1742471871-snoNPRML.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১৭ <a href="https://www.bondipathshala.com.bd/pdf/20250320-1742471871-snoNPRML.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="85TdWPDUVAQ" data-nname="রাসayনিক পরিবর্তন - পর্ব ১৭" data-npdf="20250320-1742471871-snoNPRML.pdf">
+                    রাসayনিক পরিবর্তন - পর্ব ১৭ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="CKzRDWmNsEg" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১৮" data-npdf="20250324-1742753281-zbk7fE86.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১৮ <a href="https://www.bondipathshala.com.bd/pdf/20250324-1742753281-zbk7fE86.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="CKzRDWmNsEg" data-nname="রাসayনিক পরিবর্তন - পর্ব ১৮" data-npdf="20250324-1742753281-zbk7fE86.pdf">
+                    রাসayনিক পরিবর্তন - পর্ব ১৮ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="vBdejz9IU0U" data-nname="রাসায়নিক পরিবর্তন - পর্ব ১৯" data-npdf="20250408-1744131124-JdzHgCH5.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ১৯ <a href="https://www.bondipathshala.com.bd/pdf/20250408-1744131124-JdzHgCH5.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="vBdejz9IU0U" data-nname="রাসayনিক পরিবর্তন - পর্ব ১৯" data-npdf="20250408-1744131124-JdzHgCH5.pdf">
+                    রাসaynik পরিবর্তন - পর্ব ১৯ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
-                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="_ldOpfMFLPU" data-nname="রাসায়নিক পরিবর্তন - পর্ব ২০" data-npdf="20250408-1744133818-9CwUXbfO.pdf">
-                    রাসায়নিক পরিবর্তন - পর্ব ২০ <a href="https://www.bondipathshala.com.bd/pdf/20250408-1744133818-9CwUXbfO.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="_ldOpfMFLPU" data-nname="রাসayনিক পরিবর্তন - পর্ব ২০" data-npdf="20250408-1744133818-9CwUXbfO.pdf">
+                    রাসayনিক পরিবর্তন - পর্ব ২০ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="T0FQ2qnuj5U" data-nname="কর্মমুখী রসায়ন - পর্ব ০১" data-npdf="20250416-1744745067-fb4IFhH3.pdf">
-                    কর্মমুখী রসায়ন - পর্ব ০১ <a href="https://www.bondipathshala.com.bd/pdf/20250416-1744745067-fb4IFhH3.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    কর্মমুখী রসায়ন - পর্ব ০১ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="jTRQAtEtgEw" data-nname="কর্মমুখী রসায়ন - পর্ব ০২" data-npdf="20250418-1744921535-456C4SRE.pdf">
-                    কর্মমুখী রসায়ন - পর্ব ০২ <a href="https://www.bondipathshala.com.bd/pdf/20250418-1744921535-456C4SRE.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    কর্মমুখী রসায়ন - পর্ব ০২ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="GCWIuXp0GKE" data-nname="কর্মমুখী রসায়ন - পর্ব ০৩" data-npdf="20250423-1745347364-ZoyLtgxu.pdf">
-                    কর্মমুখী রসায়ন - পর্ব ০৩ <a href="https://www.bondipathshala.com.bd/pdf/20250423-1745347364-ZoyLtgxu.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    কর্মমুখী রসায়ন - পর্ব ০৩ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="YPfG16y_lIU" data-nname="কর্মমুখী রসায়ন - পর্ব ০৪" data-npdf="20250428-1745785434-FlzTojOb.pdf">
-                    কর্মমুখী রসায়ন - পর্ব ০৪ <a href="https://www.bondipathshala.com.bd/pdf/20250428-1745785434-FlzTojOb.pdf" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    কর্মমুখী রসায়ন - পর্ব ০৪ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
                 <li class="class-item p-2 rounded hover:bg-blue-100 cursor-pointer" data-vid="Ryuvcw8T4X4" data-nname="কর্মমুখী রসায়ন - পর্ব ০৫" data-npdf="20250430-1745958813-UfNukZak.pdf">
-                    কর্মমুখী রসায়ন - পর্ব ০৫ <a href="20250430-1745958813-UfNukZak.pdf target=" _blank"="" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>
+                    কর্মমুখী রসায়ন - পর্ব ০৫ <i class="fas fa-file-pdf text-red-500 ml-2"></i>
                 </li>
             </ul>
         </div>
@@ -435,41 +454,22 @@
     <script>
         // Initialize Plyr
         const player = new Plyr('#player', {
-            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'settings', 'pip', 'fullscreen'],
-            youtube: { noCookie: true, rel: 0, showinfo: 0, modestbranding: 1 }
+            // Ensure 'volume' is included in controls
+            controls: ['play-large', 'play', 'progress', 'current-time', 'volume', 'mute', 'settings', 'pip', 'fullscreen'],
+            youtube: { noCookie: true, rel: 0, showinfo: 0, modestbranding: 1 },
+            settings: ['quality'] // Enable quality setting
         });
 
-        // Function to find and set the highest available quality
-        function setHighestQuality() {
-            const availableQualities = player.quality.options;
-            if (availableQualities && availableQualities.length > 0) {
-                // Filter out 'auto' and sort numerically in descending order
-                const sortedQualities = availableQualities
-                    .filter(quality => quality !== 'auto')
-                    .sort((a, b) => parseInt(b) - parseInt(a));
-
-                if (sortedQualities.length > 0) {
-                    const highestQuality = sortedQualities[0];
-                     // Check if the highest quality is different from the current quality before setting
-                    if (player.quality !== highestQuality) {
-                         player.quality = highestQuality;
-                         console.log(`Set playback quality to highest available: ${highestQuality}`);
-                    }
-                }
-            }
-        }
-
-        // Listen for the 'ready' event to set quality once the player is ready
-        player.on('ready', event => {
-             // A small delay might be needed for quality options to be fully populated
-            setTimeout(setHighestQuality, 100); // Adjust delay if necessary
-        });
-
-         // Listen for the 'sourcechange' event to set quality when a new video is loaded
-        player.on('sourcechange', event => {
-             // A small delay might be needed for quality options to be fully populated
-            setTimeout(setHighestQuality, 100); // Adjust delay if necessary
-        });
+        // Function to set a specific quality (360p or 720p)
+        function setVideoQuality(quality) {
+             const availableQualities = player.quality.options;
+             if (availableQualities && availableQualities.includes(quality)) {
+                 player.quality = quality;
+                 console.log(`Set playback quality to: ${quality}`);
+             } else {
+                 console.log(`Quality ${quality} not available. Available qualities: ${availableQualities.join(', ')}`);
+             }
+         }
 
 
         // Handle class selection
@@ -496,12 +496,14 @@
                     item.classList.add('bg-blue-200');
                     // Update PDF download button
                     if (pdfLink) {
+                        // Construct the full PDF URL using the base path and the pdfLink from the data attribute
                         downloadPdfBtn.href = `https://www.bondipathshala.com.bd/pdf/${pdfLink}`;
                         downloadPdfBtn.classList.remove('hidden');
                     } else {
                         downloadPdfBtn.classList.add('hidden');
                     }
-                    // Highest quality will be set automatically by the 'sourcechange' listener
+                    // Set a default quality when source changes (optional, Plyr might handle this)
+                    // setVideoQuality('720p'); // Example: set to 720p by default
                 };
                 item.addEventListener('click', new_listener);
                 item._eventListener = new_listener; // Store the listener for later removal
@@ -518,22 +520,37 @@
             li.dataset.vid = video.id;
             li.dataset.nname = video.title;
             li.dataset.npdf = video.pdfLink || '';
-            li.innerHTML = `${video.title}${video.pdfLink ? ` <a href="${video.pdfLink}" target="_blank" class="text-red-500 ml-2"><i class="fas fa-file-pdf"></i></a>` : ''}`;
+            // Removed the <a> tag, keeping only the <i> for the icon
+            li.innerHTML = `${video.title}${video.pdfLink ? ` <i class="fas fa-file-pdf text-red-500 ml-2"></i>` : ''}`;
             classListUl.appendChild(li);
         });
          // Reattach listeners after loading from local storage, clearing old ones first
          attachClassItemListeners();
 
 
-        // Download Emoji button functionality
+        // Download Emoji button functionality - CORRECTED YOUTUBE URL
         const downloadEmojiBtn = document.getElementById('downloadEmojiBtn');
         downloadEmojiBtn.addEventListener('click', () => {
             // Get the current video ID from the player source
             const currentVideoId = player.source.sources[0].src;
-            // Construct the YouTube URL
+            // Construct the correct YouTube URL
             const youtubeUrl = `https://www.youtube.com/watch?v=${currentVideoId}`;
             // Open the URL in a new tab
             window.open(youtubeUrl, '_blank');
+        });
+
+        // Add keyboard volume control
+        document.addEventListener('keydown', (event) => {
+            if (player) {
+                const currentVolume = player.volume;
+                if (event.key === 'ArrowUp') {
+                    event.preventDefault(); // Prevent default scrolling
+                    player.volume = Math.min(1, currentVolume + 0.1); // Increase volume by 10%
+                } else if (event.key === 'ArrowDown') {
+                    event.preventDefault(); // Prevent default scrolling
+                    player.volume = Math.max(0, currentVolume - 0.1); // Decrease volume by 10%
+                }
+            }
         });
 
          // Keep the local storage data but disable adding new videos
